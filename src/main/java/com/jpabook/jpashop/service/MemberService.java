@@ -15,6 +15,7 @@ import java.util.List;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+    private final MemberRepository memberRepository2;
 
     /**
      * 회원가입
@@ -26,6 +27,7 @@ public class MemberService {
 
         validateDuplicateMember(member);
         memberRepository.save(member);
+
         return member.getId();
     }
 
